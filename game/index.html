@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>AEGIS: Port Halcyon</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <div id="hud" class="hidden">
+    <div id="visor"></div>
+    <canvas id="hudfx"></canvas>
+    <div id="junoHud"><div class="orb"><i></i><i></i><i></i><i></i><i></i></div><span>JUNO</span></div>
+    <div id="log"></div>
+    <div id="boot"></div>
+    <canvas id="compass" width="460" height="38"></canvas>
+    <div id="vfxChip"></div>
+    <div id="clockChip"></div>
+    <div id="wbar"></div>
+    <div id="abil"></div>
+    <div id="lockWarn">⚠ SNIPER LOCK</div>
+    <div id="defuseRing"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="42"/><circle id="dfArc" cx="50" cy="50" r="42"/></svg><span>DEFUSING</span></div>
+    <div id="bigcount"></div>
+    <div id="crosshair"><div id="hitmark"></div></div>
+    <div id="readL" class="read"><b id="spdV">0</b><small>KM/H</small></div>
+    <div id="readR" class="read"><b id="altV">0</b><small>ALT M</small></div>
+    <div id="diag" class="panel">
+      <div class="ph">SUIT DIAGNOSTICS <span id="suitName"></span></div>
+      <div class="diag-row">
+        <svg id="suitSvg" viewBox="0 0 60 100" aria-hidden="true">
+          <rect id="p-head" x="22" y="2" width="16" height="15" rx="5"/>
+          <rect id="p-torso" x="16" y="19" width="28" height="33" rx="6"/>
+          <rect id="p-armR" x="46" y="20" width="9" height="34" rx="4"/>
+          <rect id="p-armL" x="5" y="20" width="9" height="34" rx="4"/>
+          <rect id="p-legR" x="31" y="54" width="11" height="43" rx="4"/>
+          <rect id="p-legL" x="18" y="54" width="11" height="43" rx="4"/>
+        </svg>
+        <div class="vitals">
+          <div class="lbl">ARMOR <span id="hpTxt"></span></div><div class="bar hp"><i id="hpFill"></i></div>
+          <div class="lbl">ENERGY <span id="enTxt"></span></div><div class="bar en"><i id="enFill"></i></div>
+        </div>
+      </div>
+      <div id="partList"></div>
+    </div>
+    <div id="quest" class="panel">
+      <div class="ph" id="qKind"></div>
+      <div id="qTitle"></div>
+      <div id="qDesc"></div>
+      <ul id="qSteps"></ul>
+      <div id="qMeter"></div>
+      <div id="qTimer"></div>
+    </div>
+    <canvas id="minimap" width="200" height="200"></canvas>
+    <div id="bossbar"><div id="bossName"></div><div class="bar"><i id="bossFill"></i></div></div>
+    <div id="bubbles"></div>
+    <div id="waypoint"><div class="dia"></div><span id="wpDist"></span></div>
+    <div id="prompt"></div>
+    <div id="subtitle"></div>
+    <div id="banner"></div>
+    <div id="hurt"></div>
+    <div id="clicktoplay"><div>Click to fly<br><small>Esc pauses · M map · E workbench · F shield · G shockwave · R dash</small></div></div>
+    <div id="touch" class="hidden">
+      <div id="stick"><div id="knob"></div></div>
+      <div class="tbtns">
+        <button data-b="pause" class="tb small" style="right:12px;top:12px">☰</button>
+        <button data-b="map" class="tb small" style="right:64px;top:12px">MAP</button>
+        <button data-b="juno" class="tb small" style="right:116px;top:12px">JUNO</button>
+        <button data-b="fire" class="tb big" style="right:24px;bottom:120px">FIRE</button>
+        <button data-b="alt" class="tb" style="right:120px;bottom:180px">ALT</button>
+        <button data-b="lance" class="tb" style="right:150px;bottom:100px">Q</button>
+        <button data-b="up" class="tb" style="right:30px;bottom:230px">▲</button>
+        <button data-b="down" class="tb" style="right:30px;bottom:30px">▼</button>
+        <button data-b="boost" class="tb" style="right:120px;bottom:20px">BOOST</button>
+        <button data-b="use" class="tb" style="right:210px;bottom:20px">E</button>
+        <button data-b="shield" class="tb" style="right:220px;bottom:110px">F</button>
+        <button data-b="shock" class="tb" style="right:200px;bottom:190px">G</button>
+        <button data-b="dash" class="tb" style="right:110px;bottom:260px">R</button>
+      </div>
+    </div>
+  </div>
+  <div id="toasts"></div>
+  <div id="screen" class="screen" style="display:none"></div>
+
+  <noscript>This game needs JavaScript and WebGL.</noscript>
+  <script src="js/three.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/graphics.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/environment.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/act2.js"></script>
+  <script src="js/blackwater.js"></script>
+  <script src="js/life.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

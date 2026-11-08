@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AEGIS: Port Halcyon — open-world armored flight game</title>
+  <meta name="description" content="Fly an armored suit over a huge city, fight the Cobalt Syndicate, build custom gear with your AI co-pilot JUNO. Play free in your browser or download for Windows, macOS and Linux.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-bg" src="img/shot-oldtown.jpg" alt="">
+    <nav class="top">
+      <span class="brand"><img src="img/icon.png" alt=""> AEGIS</span>
+      <span class="links"><a href="#features">Features</a><a href="#download">Download</a><a href="#controls">Controls</a><a id="repoLink" href="#">GitHub</a></span>
+    </nav>
+    <div class="hero-in">
+      <p class="kicker">OPEN-WORLD ARMORED FLIGHT</p>
+      <h1>AEGIS<span>PORT HALCYON</span></h1>
+      <p class="lead">Suit up as Rhea Kade, fly a powered suit over a huge sunset city, take down the Cobalt Syndicate, and build your own weapons and armor with your AI co-pilot, JUNO.</p>
+      <div class="cta">
+        <a class="btn primary" href="play/">▶ Play in your browser</a>
+        <a class="btn" href="#download">⬇ Download for your computer</a>
+      </div>
+      <p class="fine">Free · no account · no servers · saves stay on your device</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="features">
+      <h2>What's inside</h2>
+      <div class="grid">
+        <article><h3>A whole city to fly</h3><p>Downtown towers, twisting skyscrapers, Old Town rooftops, docks, factories, a park, a suspension bridge and an island prison fortress. Crowds chat on the sidewalks, gulls circle the harbor, and any car on the road can be lifted and thrown.</p></article>
+        <article><h3>12-mission story in two acts</h3><p>Stop the Cobalt Syndicate, then hunt Vesper Hale to her island fortress: convoys, a power-station siege, a courier tail, a bomb-defusal race on the bridge, a walker mech and a cloaking boss.</p></article>
+        <article><h3>Abilities, upgrades and races</h3><p>Shield, shockwave and dash on every suit. Earn Tech Points for six upgrade lines, and chase gold medals in four ring races, from street canyons to under the bridge deck.</p></article>
+        <article><h3>Build anything</h3><p>Six workbenches and your HQ, AEGIS Tower. Combine emitters, cells, lenses, mods and cooling into custom weapons, and plating, thrusters, reactors and helmets into custom suits.</p></article>
+        <article><h3>JUNO, your co-pilot</h3><p>A spoken AI companion who reacts to the fight, designs builds for you and tells you where to find any part.</p></article>
+        <article><h3>Helmet HUD</h3><p>First-person visor with suit diagnostics for every part, target lock and scan, threat arrows and a quest tracker.</p></article>
+        <article><h3>Built to look good</h3><p>Real-time shadows, rooms behind every window, wet reflective streets, sun rays, lens flare and 3D sound. Low, High and Ultra settings.</p></article>
+      </div>
+      <div class="shots">
+        <img src="img/shot-street.jpg" alt="First-person view down a city street with the helmet HUD and pedestrians">
+        <img src="img/shot-skyline.jpg" alt="Flying between downtown towers">
+        <img src="img/shot-bench.jpg" alt="The fabrication bay where you build custom weapons with JUNO">
+      </div>
+    </section>
+
+    <section id="download">
+      <h2>Download</h2>
+      <p class="sub">The desktop app runs in its own window, works offline and keeps your saves on your computer.</p>
+      <div class="dl">
+        <a class="card" data-asset="AEGIS-Setup.exe"><b>Windows</b><span>Installer (.exe)</span></a>
+        <a class="card" data-asset="AEGIS-Portable.exe"><b>Windows portable</b><span>No install, just run (.exe)</span></a>
+        <a class="card" data-asset="AEGIS-mac.dmg"><b>macOS</b><span>Apple Silicon &amp; Intel (.dmg)</span></a>
+        <a class="card" data-asset="AEGIS-linux.AppImage"><b>Linux</b><span>AppImage</span></a>
+        <a class="card" href="AEGIS-offline.zip"><b>Offline (any OS)</b><span>Unzip, then double-click index.html</span></a>
+      </div>
+      <details class="help">
+        <summary>First time opening it? (unsigned app warnings)</summary>
+        <p><b>Windows:</b> if SmartScreen says "Windows protected your PC", click <i>More info</i> → <i>Run anyway</i>.</p>
+        <p><b>macOS:</b> right-click the app → <i>Open</i> → <i>Open</i>. If it says the app is damaged, run <code>xattr -cr "/Applications/AEGIS Port Halcyon.app"</code> in Terminal.</p>
+        <p><b>Linux:</b> make the AppImage executable (<code>chmod +x AEGIS-linux.AppImage</code>) and run it.</p>
+      </details>
+      <p class="fine" id="relNote"></p>
+    </section>
+
+    <section id="controls">
+      <h2>Controls</h2>
+      <table>
+        <tr><td>Mouse</td><td>Look and aim</td><td>Left / right click</td><td>Primary / secondary weapon</td></tr>
+        <tr><td>W A S D</td><td>Move and hover</td><td>Space / C</td><td>Fly up / down</td></tr>
+        <tr><td>Shift + W</td><td>Boost where you look</td><td>Q</td><td>Core Lance</td></tr>
+        <tr><td>F (hold)</td><td>Shield</td><td>G / R</td><td>Shockwave / dash</td></tr>
+        <tr><td>E by a car</td><td>Lift, then click to throw</td><td>E (hold)</td><td>Defuse a charge</td></tr>
+        <tr><td>E</td><td>Workbench / talk to people</td><td>J</td><td>Ask JUNO</td></tr>
+        <tr><td>1–9 / wheel</td><td>Swap weapons</td><td>V</td><td>First / third person</td></tr>
+        <tr><td>M</td><td>Map and fast travel</td><td>Esc</td><td>Pause, save, settings</td></tr>
+      </table>
+      <p class="fine">Phones and tablets get touch controls in the browser version.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>AEGIS: Port Halcyon is open source (MIT). Built with <a href="https://threejs.org">three.js</a>. All characters, places and story are original.</p>
+  </footer>
+
+  <script>
+    // Work out the GitHub repo from the Pages address (owner.github.io/repo/) so the
+    // download buttons always point at the newest release.
+    (function () {
+      var host = location.hostname, parts = location.pathname.split('/').filter(Boolean);
+      var owner = null, repo = null;
+      if (/\.github\.io$/.test(host)) { owner = host.split('.')[0]; repo = parts.length && parts[0] !== 'play' ? parts[0] : host; }
+      var base = owner ? 'https://github.com/' + owner + '/' + repo : null;
+      document.querySelectorAll('[data-asset]').forEach(function (a) {
+        a.href = base ? base + '/releases/latest/download/' + a.getAttribute('data-asset') : 'https://github.com/';
+      });
+      var rl = document.getElementById('repoLink'); rl.href = base || 'https://github.com/';
+      document.getElementById('relNote').innerHTML = base
+        ? 'All builds: <a href="' + base + '/releases/latest">latest release on GitHub</a>.'
+        : 'Download links work once this site is published on GitHub Pages.';
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "name": "aegis-port-halcyon",
+  "productName": "AEGIS Port Halcyon",
+  "version": "1.0.0",
+  "description": "AEGIS: Port Halcyon \u2014 open-world armored flight game (desktop edition)",
+  "main": "main.js",
+  "author": "AEGIS: Port Halcyon contributors",
+  "license": "MIT",
+  "scripts": {
+    "copy-game": "node scripts/copy-game.js",
+    "start": "npm run copy-game && electron .",
+    "dist": "npm run copy-game && electron-builder",
+    "dist:dir": "npm run copy-game && electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "io.github.aegis.porthalcyon",
+    "productName": "AEGIS Port Halcyon",
+    "artifactName": "AEGIS-${version}-${os}-${arch}.${ext}",
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "AEGIS-Setup.${ext}",
+      "shortcutName": "AEGIS Port Halcyon"
+    },
+    "portable": {
+      "artifactName": "AEGIS-Portable.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "universal"
+          ]
+        }
+      ],
+      "category": "public.app-category.action-games",
+      "icon": "build/icon.png",
+      "identity": null,
+      "artifactName": "AEGIS-mac.${ext}"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ],
+      "category": "Game",
+      "icon": "build/icon.png",
+      "artifactName": "AEGIS-linux.${ext}"
+    },
+    "publish": []
+  }
+}
